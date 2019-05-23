@@ -8,7 +8,8 @@ header > h1 {
     font-size: 2em;
 }
 #container {
-    width: 55%;
+    width: 75%;
+    max-width: 800px;
     margin: auto;
     height: auto;
     background-color: #fff;
@@ -30,21 +31,22 @@ form > p {
     margin: 0.2em 0;
 }
 .labels {
-    flex: 1;
+    flex: 50%;
     text-align: right;
     margin-right: 1em;
     line-height: 1.5em;
 }
 .right-side {
-    flex: 1;
+    flex: 50%;
 }
 .right-side > input {
     height: 25px;
     width: 70%;
     padding-left: 0.5em;
 }
-.right-side #currentRoleOptions {
-    width: 45%;
+#currentRoleOptions, #likeTheMost {
+    width: 150px;
+    max-width: 70%;
     height: 35px;
 }
 .recommend-options {
@@ -78,3 +80,18 @@ textarea {
     font-size: 1em;
 }
 
+@media screen and (max-width: 540px) {
+    .column {
+        flex-direction: column;
+        width: 100%;
+    }
+    .labels {
+        align-self: flex-start;
+        text-align: left;
+    }
+    .right-side {
+        min-width: 100%;
+        margin-top: 10px;
+    }
+
+}
